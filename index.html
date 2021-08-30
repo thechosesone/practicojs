@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figuras practicojs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Camburcito con descuento</title>
 </head>
 <body>
-    <h1>Figuras Geometricas</h1>
-    <script src="script.js"></script>
+    <div class="container_maxwidth">
+        <div class="wrapper_column">
+            <img src="/dist/camburcito.png" alt="foto de un camburcito" class="cambur_img">
+            <div class="product_content">
+                <h1>Camburcito</h1>
+                <h2>Tiene Potasio</h2>
+                <h1>$500</h1>
+            </div>            
+            <div class="bg_shape"></div>
+        </div>
+        <div class="wrapper_column_payment">
+            <div class="payment__container">
+                <h2>cupón de descuento <img src="/dist/icon-coupon.svg" alt="icono cupon" class="inline_icon"></h2>
+                <h3>Escribe tu nombre y descubre si<br/>existe un descuento especial para ti</h3>
+                <form class="coupon-input__wrapper is-flex-row justify-sb">
+                    <input type="text" id="CouponInput" class="coupon-input__field">
+                    <button type="button" class="button_secondary" onclick="validateCoupon()">Verificar</button>                        
+                </form>
+                <div class="confirmation__row"><p id="Confirmation" class="confirmationtext"></p></div> 
+                <div class="payment__row is-flex-row justify-sb">
+                    <p>Precio inicial</p>
+                    <p id="InitialPrice"></p>
+                </div>
+                <div class="payment__row is-flex-row justify-sb">
+                    <p>Descuento</p>
+                    <p id="Discount"></p>
+                </div>
+                <div class="payment__row is-flex-row justify-sb">
+                    <h1 class="payment__text">Total a pagar:</h1>
+                    <h1 id="Total" class="payment__text"></h1>
+                </div>
+                <button type="button" class="button_primary">Pagar</button>
+            </div>
+        </div>
+    </div>
+    <script src="camburcito.js"></script>
 </body>
 </html>

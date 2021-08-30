@@ -1,0 +1,339 @@
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color-primary: #FFFBFB;
+    --bg-color-secondary: #F0F3B7;
+
+    --button-color-primary: #412727;
+    --button-color-text: #FFFBFB;
+
+    --text-color-primary: #2A231C;
+    --text-color-secondary: #AFA29C;
+
+    --text-color-inputfield: #A79389;
+    --bg-color-inputfield: #F5F0E9;
+
+    --ui-color-lines: #EBE4DE;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+button:hover {
+
+    cursor: pointer;
+}
+
+
+h1, h2, h3, h4, p, .button_text, .input_field_text, button {
+
+    font-family: 'Poppins', 'sans-serif';
+    color: var(--text-color-primary);
+    margin-top: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-color-secondary);
+}
+
+p {
+
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.is-flex-row {
+    display: flex;
+}
+
+.justify-sb {
+    justify-content: space-between;
+}
+
+.button_primary {
+
+    margin-top: 30px;
+    display: inline-block;
+    
+    height: 40px;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    color: var(--button-color-text);
+
+    border-radius: 20px;
+    background-color: var(--button-color-primary);
+
+    border: none;
+
+}
+
+.button_primary:hover {
+    background-color: var(--text-color-primary);
+}
+
+.button_secondary {
+
+    display: block;
+    
+    height: 40px;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    color: var(--button-color-primary);
+
+    border-radius: 20px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    background-color: transparent;
+
+    border: 2px solid var(--button-color-primary);
+    transition: 200ms ease-out;
+
+}
+
+.button_secondary:hover {
+
+    color: var(--text-color-inputfield);
+
+    border: 2px solid var(--text-color-inputfield);
+
+
+}
+
+
+.button_secondary:active {
+
+    color: var(--button-color-primary);
+    border: 2px solid var(--button-color-primary);
+
+    transition: none;
+
+}
+
+
+.button_primary {
+
+display: inline-block;
+width: 100%;
+text-align: center;
+background-color: var(--button-color-primary);
+color: var(--button-color-text);
+transition: 200ms ease-out;
+
+}
+
+.button_primary:hover {
+
+
+    box-shadow: 0px 4px 4px rgba(101, 71, 44, 0.25);
+
+}
+
+
+
+body {
+
+    background-color: var(--bg-color-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container_maxwidth {
+
+    display: grid;
+
+    width: 90vw;
+    max-width: 940px;
+
+    height: 100vh;
+
+    margin: 0 auto;
+
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 130px;
+
+
+}
+
+.wrapper_column {
+
+
+    display: grid;
+
+    position: relative;
+
+    grid-template-rows: 140px 1fr 2fr 4fr;
+    text-align: center;
+    height: 100%;
+
+}
+
+.cambur_img {
+
+    position: absolute;
+    z-index: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    justify-self: center;
+
+ 
+    height: auto;
+    width: 75%;
+}
+
+.bg_shape {
+
+    position: absolute;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    height: 100%;
+    width: 100%;
+    
+    z-index: 0;
+
+    background-color: var(--bg-color-secondary);
+
+    border-radius: 90px 90px 0 0;
+
+}
+
+.product_content {
+
+    position: absolute;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    z-index: 9;
+    justify-self: center;
+
+}
+
+.wrapper_column_payment {
+
+    display: grid;
+
+    position: relative;
+
+    grid-template-rows: 140px 1fr 2fr 4fr;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.inline_icon {
+
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-left: 8px;
+    vertical-align: bottom;
+}
+
+.payment__container {
+
+    position: absolute;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    text-align: left;
+
+    width: 100%;
+}
+
+.coupon-input__wrapper {
+
+    height: 40px;
+    padding: 0;
+
+}
+
+.coupon-input__field {
+
+    box-sizing: border-box;
+
+    height: 100%;
+
+    border-radius: 12px;
+    background-color: var(--bg-color-inputfield);
+    color: var(--text-color-inputfield);
+
+    padding-left: 20px;
+
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 500;
+
+    border: solid 2px var(--bg-color-inputfield);
+
+    transition: ease-in-out 200ms;
+
+    max-width: 55%;
+}
+
+.coupon-input__field:focus {
+
+    border: solid 2px var(--text-color-inputfield);
+
+}
+
+.payment__row {
+    border-top: 1px solid var(--ui-color-lines);
+    margin-top: 24px;
+    padding-top: 24px;
+}
+
+.payment__text {
+    font-size: 18px;
+}
+
+.confirmation__row {
+    margin-top: 24px;
+    height: 24px;
+}
+
+.redtext {
+
+    color: red;
+}
+
+.greentext {
+
+    color: green;
+}
+
+.confirmationtext {
+    font-size: 12px;
+}
